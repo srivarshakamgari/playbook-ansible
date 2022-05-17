@@ -21,5 +21,5 @@ jobs:
       awsCredentials: 'AWS_SANDBOX'
       regionName: 'us-east-1'
       bucketName: 'azure-devops-1'
-      sourceFolder: 'f2'
+      sourceFolder: 'f2/index.html'
       globExpressions: '**'
