@@ -10,16 +10,19 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: FileCreate 
+- job: playbook-ansible-deploy 
   steps: 
-  - script: mkdir f2
-  - script: touch f2/f2
-  - script: ls -lart
   - script: pwd
+  - script: ls -lart
   - task: S3Upload@1
     inputs:
-      awsCredentials: 'AWS_SANDBOX'
+      # awsCredentials: 'AWSJ'
+      # regionName: 'us-east-1'
+      # bucketName: 'azure-devops-1'
+      # sourceFolder: 'index.html'
+      # globExpressions: '**'
+      awsCredentials: 'AWSJ'
       regionName: 'us-east-1'
-      bucketName: 'azure-devops-1'
-      sourceFolder: 'f2/index.html'
+      bucketName: 'freetolearn'
+      sourceFolder: 'index.html'
       globExpressions: '**'
