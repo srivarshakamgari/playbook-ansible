@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: playbook-ansible-deploy 
+- job: playbookAnsibleDeploy 
   steps: 
   - script: pwd
   - script: ls -lart
