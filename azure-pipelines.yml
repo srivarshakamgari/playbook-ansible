@@ -9,9 +9,17 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
-- task: PublishBuildArtifacts@1
+jobs:
+- job: FileCreate 
+  steps: 
+  - script: mkdir f2
+  - script: touch f2/f2
+  - script: ls -lart
+  - script: pwd
+  - task: S3Upload@1
+    inputs:
+      awsCredentials: 'AWSJ'
+      regionName: 'us-east-1'
+      bucketName: 'freetolearn'
+      sourceFolder: 'f2'
+      globExpressions: '**'
