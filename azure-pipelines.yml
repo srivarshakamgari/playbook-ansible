@@ -18,8 +18,8 @@ jobs:
   - script: pwd
   - task: S3Upload@1
     inputs:
-      awsCredentials: 'AWSJ'
+      awsCredentials: 'AWS_SANDBOX'
       regionName: 'us-east-1'
-      bucketName: 'freetolearn'
+      bucketName: 'azure-devops-1'
       sourceFolder: 'f2'
       globExpressions: '**'
