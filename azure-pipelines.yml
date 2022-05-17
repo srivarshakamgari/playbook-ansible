@@ -25,5 +25,4 @@ jobs:
       awsCredentials: 'AWSJ'
       regionName: 'us-east-1'
       bucketName: 'freetolearn'
-      sourceFolder: 'index.html'
       globExpressions: '**'
