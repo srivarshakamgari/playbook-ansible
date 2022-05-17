@@ -14,6 +14,7 @@ jobs:
   steps: 
   - script: pwd
   - script: ls -lart
+  - script: ls -ld $PWD/*
   - task: S3Upload@1
     inputs:
       # awsCredentials: 'AWSJ'
