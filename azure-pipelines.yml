@@ -17,11 +17,7 @@ jobs:
   - script: ls -ld $PWD/*
   - task: S3Upload@1
     inputs:
-      awsCredentials: 'AWS_SANDBOX'
-      regionName: 'us-east-1'
-      bucketName: 'azure-devops-1'
-      globExpressions: '**'
-#       awsCredentials: 'AWSJ'
-#       regionName: 'us-east-1'
-#       bucketName: 'freetolearn'
-#       globExpressions: '**'
+       awsCredentials: 'AWSJ'
+       regionName: 'us-east-1'
+       bucketName: 'freetolearn'
+       globExpressions: '**'
